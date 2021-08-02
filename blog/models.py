@@ -9,7 +9,7 @@ class Post(models.Model):
       # 왜래키 (장고에서 기본 제공하는 User 모델과 M:1 관계)
     title = models.CharField(max_length=144)
       # 길이제한 144자
-    subtitle = models.CharField(blank=True, null=True, max_length=144)
+    subtitle = models.CharField(max_length=144, blank=True, null=True)
       # Application단 null OK, DB단 null OK
     content = models.TextField()
       # 기본 TextField
